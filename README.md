@@ -245,5 +245,20 @@ ProcureFlow outputs match the standard reporting templates required by governmen
 
 ---
 
-### 💼 Designed for Procurement Excellence
-*Built specifically for Tender Directors, Procurement Managers, and Financial Evaluation Committees seeking absolute accuracy, speed, and statutory compliance.*
+## 👨‍💻 Developed by Muhammad Rafique
+
+**ProcureFlow** is conceptualized and engineered by **Muhammad Rafique**.
+
+[![Portfolio](https://img.shields.io/badge/Website-mr--software.online-0284C7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mr-software.online/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Muhammad%20Rafique-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/muhammad-rafique-944b05159/)
+[![GitHub](https://img.shields.io/badge/GitHub-Muhammad9985-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Muhammad9985)
+
+* 🌐 **Portfolio & Studio**: [https://mr-software.online/](https://mr-software.online/)
+* 💼 **LinkedIn Profile**: [linkedin.com/in/muhammad-rafique-944b05159](https://www.linkedin.com/in/muhammad-rafique-944b05159/)
+* 🐙 **GitHub Repository**: [github.com/Muhammad9985](https://github.com/Muhammad9985)
+
+---
+
+### ⚖️ Copyright & License
+© 2026 **Muhammad Rafique** (`mr-software.online`). All Rights Reserved.  
+*Engineered for Procurement Excellence, Financial Integrity, and Statutory Compliance.*
