@@ -55,7 +55,7 @@ This diagram illustrates how ProcureFlow guides an entire tender from bid openin
 
 ```mermaid
 flowchart TD
-    Start(["🔔 Tender Financial Bid Opening"]) --> Ingest["📂 Ingest Vendor Proposals<br/>(M/s. Haq Enterprises, M/s. Z.S TRADERS, etc.)"]
+    Start(["🔔 Tender Financial Bid Opening"]) --> Ingest["📂 Ingest Vendor Proposals<br/>(Company A, Company B, etc.)"]
 
     Ingest --> Parse["⚡ Instant Parsing Engine<br/>Extracts Code, Description, Quantity, UOM, Unit Rate"]
     
@@ -124,17 +124,17 @@ ProcureFlow was tested and validated against real tender data from **Shaheed Moh
 * **Tender Title**: Procurement of Printing & Publication Articles on Framework Contract Basis
 * **Tender Reference**: `PROC/SMBBIT/(PP-01)/2026-27` | **EPADS ID**: `S-26090824871`
 * **Competing Proposals**:
-  * **M/s. Haq Enterprises**: Quoted all **87 BOQ items**
-  * **M/s. Z.S TRADERS**: Quoted **41 items**
+  * **Company A**: Quoted all **87 BOQ items**
+  * **Company B**: Quoted **41 items**
 
 ### Real Comparative Evaluation Example:
 
 | S.# | Item Code | Item Description | Tentative Qty | Competing Firm | Unit Rate | Extended Total | Rank | Successful Bidder | Fiscal Savings Achieved |
 | :---: | :---: | :--- | :---: | :--- | :---: | :---: | :---: | :---: | :---: |
-| **2** | `Pri0003` | Physician Order Sheet | 90,000 Sheets | **M/s. Haq Enterprises**<br>M/s. Z.S TRADERS | **PKR 2.50**<br>PKR 5.20 | **PKR 225,000.00**<br>PKR 468,000.00 | **1st**<br>2nd | **M/s. Haq Enterprises**<br>— | **PKR 243,000.00**<br>*(PKR 2.70 saved per sheet)* |
-| **3** | `Pri0004` | Progress Notes / Paper | 270,000 Pads | **M/s. Z.S TRADERS**<br>M/s. Haq Enterprises | **PKR 2.38**<br>PKR 2.50 | **PKR 642,600.00**<br>PKR 675,000.00 | **1st**<br>2nd | **M/s. Z.S TRADERS**<br>— | **PKR 32,400.00**<br>*(PKR 0.12 saved per pad)* |
-| **5** | `Pri0007` | Envelope 4x9 70gm | 2,000 Nos. | **M/s. Z.S TRADERS**<br>M/s. Haq Enterprises | **PKR 8.60**<br>PKR 9.10 | **PKR 17,200.00**<br>PKR 18,200.00 | **1st**<br>2nd | **M/s. Z.S TRADERS**<br>— | **PKR 1,000.00**<br>*(PKR 0.50 saved per envelope)* |
-| **6** | `Pri0008` | Envelope 10.25x12.25 (A4) | 4,000 Nos. | **M/s. Haq Enterprises**<br>M/s. Z.S TRADERS | **PKR 15.00**<br>PKR 18.20 | **PKR 60,000.00**<br>PKR 72,800.00 | **1st**<br>2nd | **M/s. Haq Enterprises**<br>— | **PKR 12,800.00**<br>*(PKR 3.20 saved per envelope)* |
+| **2** | `Pri0003` | Physician Order Sheet | 90,000 Sheets | **Company A**<br>Company B | **PKR 2.50**<br>PKR 5.20 | **PKR 225,000.00**<br>PKR 468,000.00 | **1st**<br>2nd | **Company A**<br>— | **PKR 243,000.00**<br>*(PKR 2.70 saved per sheet)* |
+| **3** | `Pri0004` | Progress Notes / Paper | 270,000 Pads | **Company B**<br>Company A | **PKR 2.38**<br>PKR 2.50 | **PKR 642,600.00**<br>PKR 675,000.00 | **1st**<br>2nd | **Company B**<br>— | **PKR 32,400.00**<br>*(PKR 0.12 saved per pad)* |
+| **5** | `Pri0007` | Envelope 4x9 70gm | 2,000 Nos. | **Company B**<br>Company A | **PKR 8.60**<br>PKR 9.10 | **PKR 17,200.00**<br>PKR 18,200.00 | **1st**<br>2nd | **Company B**<br>— | **PKR 1,000.00**<br>*(PKR 0.50 saved per envelope)* |
+| **6** | `Pri0008` | Envelope 10.25x12.25 (A4) | 4,000 Nos. | **Company A**<br>Company B | **PKR 15.00**<br>PKR 18.20 | **PKR 60,000.00**<br>PKR 72,800.00 | **1st**<br>2nd | **Company A**<br>— | **PKR 12,800.00**<br>*(PKR 3.20 saved per envelope)* |
 
 * **Accuracy Verification**: Every figure computed in ProcureFlow matched the official signed evaluation sheet with **100% precision (0.00% variance)**.
 
