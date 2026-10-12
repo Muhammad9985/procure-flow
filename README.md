@@ -81,6 +81,32 @@ flowchart TD
 
 ---
 
+## 🏢 How Vendor & Company Names are Detected (Zero-Miss Ingestion)
+
+In real procurement operations, contractors submit proposals in varied formats—some submit digital vector PDFs, while others submit scanned photocopies with letterhead stamps and logos. ProcureFlow uses a **multi-tier detection engine** to ensure no company proposal is ever lost or misassigned:
+
+```mermaid
+flowchart TD
+    PDF["📄 Ingested Proposal PDF"] --> CheckText{"Does the PDF contain readable text?"}
+
+    CheckText -- "✅ YES (Digital PDF)" --> ScanHeader["🔍 Tier 1: Header Text Scanner<br/>Scans top lines for 'M/s.', 'Company:', 'Firm:', 'Vendor:'"]
+    ScanHeader --> FoundName{"Company prefix detected?"}
+    FoundName -- "Yes" --> Assign1["Automatically Assigns Registered Company Name"]
+    FoundName -- "No" --> FileFallback
+
+    CheckText -- "❌ NO (Scanned Photocopy / Image)" --> FileFallback["📁 Tier 2: File-Name Fallback<br/>Uses the PDF file name as the company identifier"]
+
+    FileFallback --> Assign2["Assigns Vendor Name directly from File<br/>(e.g. 'Company A.pdf' → 'Company A')"]
+
+    Assign1 & Assign2 --> Protect["🛡️ Tier 3: Traceable Audit Connection<br/>Every quoted rate & winning item is locked to the correct firm"]
+```
+
+### 💡 Best Practice for Procurement Officers:
+* **Save files with the contractor's name**: (e.g., `Company A.pdf`, `Company B.pdf`, or `Al-Noor Printers.pdf`).
+* **Why this is foolproof**: Even if a contractor submits an image-only scanned photocopy with zero selectable text, the software instantly identifies the bidder from the file name—guaranteeing 100% accurate company attribution across all 90+ BOQ line items.
+
+---
+
 ## 🧮 How the System Ranks Bidders & Calculates Fiscal Savings
 
 Under statutory framework agreements (such as **SPPRA Rule 15(B)** and **Federal PPRA**), tenders are evaluated on **Unit Price** because contract quantities are tentative estimates needed throughout the fiscal year.
